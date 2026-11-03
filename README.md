@@ -1,2 +1,1 @@
-# bootcamp-002
-Repositorio Bootcamp
+this is my readme for this project
