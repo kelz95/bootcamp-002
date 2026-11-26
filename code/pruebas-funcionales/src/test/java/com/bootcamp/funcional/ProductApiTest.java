@@ -179,6 +179,15 @@ class ProductApiTest {
         }
     }
 
+    @Test
+    @DisplayName("GET /api/v1/products/1 -> 200 con el producto 1")
+    void testValidateProductByName() {
+        given(api).filter(contrato)
+                .get("/api/v1/products/1")
+                .then().statusCode(200)
+                .body("name", equalTo("Laptop Pro 14"));
+    }
+
     // ---------- utilidades ----------
 
     private static BigDecimal precio(Object valor) {
